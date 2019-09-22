@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Dealer</title>
+</head>
+<body>
+    <h1>All customers</h1>
+    <div th:each="customer : ${customers}">
+        <p th:text="${customer.name}"></p>
+        <p th:text="${customer.birthDate}"></p>
+        <a th:href="|/customers/edit/${customer.id}|">Edit</a>
+    </div>
+</body>
+</html>

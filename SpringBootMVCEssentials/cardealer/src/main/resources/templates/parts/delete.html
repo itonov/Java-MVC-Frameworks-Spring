@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Dealer</title>
+</head>
+<body>
+<h1 th:text="|Delete ${part.name}?|"></h1>
+<form th:action="|/parts/delete/${part.id}|" method="post" >
+    <button type="submit">Confirm</button>
+</form>
+<form th:action="|/parts/all|" method="get">
+    <button type="submit">Cancel</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Dealer</title>
+</head>
+<body>
+<h1 align="center">Sale Details</h1>
+<table align="center">
+    <thead>
+    <tr>
+        <th>Number</th>
+        <th>Car Make</th>
+        <th>Car Model</th>
+        <th>Customer Name</th>
+        <th>Discount</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr align="center">
+            <td th:text="${sale.id}"></td>
+            <td th:text="${sale.car.make}"></td>
+            <td th:text="${sale.car.model}"></td>
+            <td th:text="${sale.customer.name}"></td>
+            <td th:text="${sale.discount}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

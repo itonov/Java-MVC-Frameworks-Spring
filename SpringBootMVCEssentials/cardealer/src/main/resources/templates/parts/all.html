@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Dealer</title>
+</head>
+<body>
+<h1>All Parts</h1>
+<div th:each="part : ${parts}">
+    <p th:text="|Part name: ${part.name}|"></p>
+    <p th:text="|Price: ${part.price}|"></p>
+    <p th:text="|Supplier name: ${part.supplier.name}|"></p>
+    <a th:href="|/parts/delete/${part.id}|">Delete</a>
+</div>
+</body>
+</html>

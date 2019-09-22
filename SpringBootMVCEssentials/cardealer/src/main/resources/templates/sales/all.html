@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Dealer</title>
+</head>
+<body>
+<h1 align="center">All Sales</h1>
+<table align="center">
+    <thead>
+    <tr>
+        <th>Number</th>
+        <th>Car Make</th>
+        <th>Discount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="sale : ${sales}">
+        <td align="center" th:text="${sale.id}"></td>
+        <td align="center" th:text="${sale.car.make}"></td>
+        <td align="center" th:text="${sale.discount}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

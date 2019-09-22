@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Dealer</title>
+</head>
+<body>
+<h1>Add Car</h1>
+<form action="/cars/add" method="post" >
+    Make: <input type="text" name="make"/>
+    Model: <input type="text" name="model"/>
+    Travelled Distance: <input type="number" name="distance"/>
+    <div th:each="part : ${parts}">
+        <input type="checkbox" th:text="${part.name}" th:value="${part.name}" name="chosenParts">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

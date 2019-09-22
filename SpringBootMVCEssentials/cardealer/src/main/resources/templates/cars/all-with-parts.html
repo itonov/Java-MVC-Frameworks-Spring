@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Dealer</title>
+</head>
+<body>
+<h1>Car Info:</h1>
+<h3 th:text="|Car make: ${car.make}|"></h3>
+<h3 th:text="|Car model: ${car.model}|"></h3>
+<h3 th:text="|Travelled distance: ${car.travelledDistance}|"></h3>
+<h1>Parts: </h1>
+<h3>
+    <tr th:each="part : ${parts}">
+        <td th:text="|Part name: ${part.name}|"></td>
+        <br/>
+        <td th:text="|Part price: ${part.price}|"></td>
+        <hr/>
+    </tr>
+</h3>
+</body>
+</html>

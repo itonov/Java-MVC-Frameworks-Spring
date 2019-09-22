@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Dealer</title>
+</head>
+<body>
+<h1 th:text="|Edit ${part.name}|"></h1>
+<form th:action="|/parts/edit/${part.id}|" method="post" >
+    Price: <input type="number" step="0.1" id="price" name="price"/>
+    Quantity: <input type="number" id="quantity" name="quantity"/>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
